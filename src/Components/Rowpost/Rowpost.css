@@ -1,0 +1,33 @@
+.rowpost{
+    /* height: 100px; */
+    color: #ffffff;
+}
+
+.rowpost .title{
+    padding-left: 15px;
+    font-family: Arial;
+}
+
+.row{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    
+}
+
+.row::-webkit-scrollbar{
+    display: none;
+}
+
+.rowpost .image{
+    height: 10rem;
+    margin: 10px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px #252525,-5px -5px 10px #303030;
+    transition: all 0.2s ease;
+}
+
+.rowpost .image:hover{
+    scale: 115%;
+    /* transition: all 0.2s ease; */
+}
