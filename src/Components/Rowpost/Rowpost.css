@@ -35,3 +35,14 @@
     z-index: 7;
     /* transition: all 0.2s ease; */
 }
+
+
+/* .youtube::before{
+    content: "X";
+    position:relative;
+    right: 0;
+    left: -100;
+    top: 43px;
+    font-size: x-large;
+
+} */

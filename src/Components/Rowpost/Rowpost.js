@@ -23,8 +23,8 @@ function Rowpost(props) {
     }, [])
 
     const opts = {
-        height: '390',
-        width: '100%',
+        height: '39%',
+        width: '64%',
         playerVars: {
             // https://developers.google.com/youtube/player_parameters
             autoplay: 1,
@@ -42,7 +42,7 @@ function Rowpost(props) {
             } else {
                 setUrlId("")
             }
-        }).catch(err=>{
+        }).catch(err => {
             setUrlId("")
         })
     }
@@ -57,7 +57,15 @@ function Rowpost(props) {
                 )}
 
             </div>
-            {urlId && <YouTube videoId={urlId} opts={opts} />}
+            {urlId && <YouTube videoId={urlId} opts={opts} className="youtube" onReady={() => {
+                console.log("hi");
+                return (
+                    <div>
+                        <h1 className="image">HELLO</h1>
+                    </div>
+                )
+
+            }} />}
         </div >
     )
 }
