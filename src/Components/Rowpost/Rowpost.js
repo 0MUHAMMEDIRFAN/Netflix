@@ -38,6 +38,7 @@ function Rowpost(props) {
                     if (obj.type === "Trailer") {
                         setUrlId(obj.key);
                     }
+                    return null;
                 })
             } else {
                 setUrlId("")

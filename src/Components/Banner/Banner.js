@@ -12,7 +12,6 @@ function Banner() {
       setMovie(response.data.results[Math.floor(Math.random() * 19)]);
       console.log(response.data.results);
 
-
     })
 
   }, [])
@@ -22,7 +21,7 @@ function Banner() {
   }
 
   return (
-    <div className='banner' style={{ background: `url(${movie ? constants.imageUrl + movie.backdrop_path : ""})` }}>
+    <header className='banner' style={{backgroundImage: `url(${movie ? constants.imageUrl + movie.backdrop_path : ""})`, backgroundSize: "cover", backgroundPosition: "center" }}>
       <div className='content'>
         <h1 className="title">{movie ? movie.title ? movie.title : movie.name : ""}</h1>
         <div className='banner-buttons'>
@@ -30,10 +29,14 @@ function Banner() {
           <button className='button'>My List</button>
         </div>
         <h1 className="description">{movie ? movie.overview : ""}</h1>
+        <div className='star'>
+
+        {movie && movie.vote_average!== 0 &&<progress max={10} value= {movie.vote_average}></progress>}
+        </div>
       </div>
       <div className='fade-bottom'></div>
 
-    </div>
+    </header>
   )
 }
 
